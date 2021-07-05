@@ -7,7 +7,7 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'ban',
-            description: 'Bans the tagged users',
+            description: 'User ban twnabne!',
             category: 'dev',
             usage: `${client.config.prefix}ban [@tag]`
         })
@@ -17,7 +17,7 @@ export default class Command extends BaseCommand {
         if (!this.client.config.mods?.includes(M.sender.jid)) return void null
         const immortals = [M.sender, this.client.user.jid]
         if (M.quoted?.sender) M.mentioned.push(M.quoted.sender)
-        if (!M.mentioned.length || !M.mentioned[0]) return void M.reply('Please mention the user whom you want to ban')
+        if (!M.mentioned.length || !M.mentioned[0]) return void M.reply('Ban twningba mido mention twbirkoh!')
         let text = '*STATE*\n\n'
         for (const user of M.mentioned) {
             if (immortals.includes(user)) continue
@@ -25,11 +25,11 @@ export default class Command extends BaseCommand {
             const info = this.client.getContact(user)
             const username = info.notify || info.vname || info.name || user.split('@')[0]
             if (data?.ban) {
-                text += `🟨 ${username}: Already Banned\n`
+                text += `🟨 ${username}: Hannaa Ban twre madi!\n`
                 continue
             }
             await this.client.banUser(user)
-            text += `🟥 ${username}: Banned\n`
+            text += `🟥 ${username}: Commands Amta Sijan naba yara roi!\n`
         }
         M.reply(text)
     }
