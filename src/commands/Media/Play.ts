@@ -20,7 +20,8 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
-        if (!joined) return void M.reply('Please provide a search term')
+        M.reply('Sending..Please Wait!')
+        if (!joined) return void M.reply('Eshei maming artist ywrsu ywdrsu yai happaga search twbiyu')
         const term = joined.trim()
         const { videos } = await yts(term)
         if (!videos || videos.length <= 0) return void M.reply(`No Matching videos found for the term : *${term}*`)
