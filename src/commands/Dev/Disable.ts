@@ -7,7 +7,7 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'disable',
-            description: 'Disables the given command from being used',
+            description: 'Command ama sijan naba yahndanabne!',
             category: 'dev',
             usage: `${client.config.prefix}disable [command] | (reason)`
         })
@@ -17,17 +17,17 @@ export default class Command extends BaseCommand {
         if (!this.client.config.mods?.includes(M.sender.jid)) return void null
         const split = joined.split('|')
         const key = split[0].toLowerCase().trim()
-        if (!key) return void (await M.reply(`Provide the command you want to disable`))
+        if (!key) return void (await M.reply(`Disable twning liba command do hapirkoh!`))
         const command = this.handler.commands.get(key) || this.handler.aliases.get(key)
-        if (!command) return void (await M.reply(`No command found`))
+        if (!command) return void (await M.reply(`Yoza ! I can not find that command`))
         if (await this.client.DB.disabledcommands.findOne({ command: command.config.command }))
-            return void M.reply(`${command.config.command} is already disabled`)
+            return void M.reply(`${command.config.command} Hanna dei su sijan naba yade sidi!`)
         await new this.client.DB.disabledcommands({
             command: command.config.command,
             reason: (split[1] || '').trim() || ''
         }).save()
         await M.reply(
-            `*${this.client.util.capitalize(command.config.command)}* is now Disabled${
+            `*${this.client.util.capitalize(command.config.command)}* Sijan naba yahndre!${
                 split[1] ? ` for ${split[1]}` : ''
             }`
         )
