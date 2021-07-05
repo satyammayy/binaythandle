@@ -20,7 +20,7 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
-        M.reply('Sending..Please Wait!')
+        M.reply('🎀_*ɴɢᴀᴋ ɴɢᴀɪʙɪʏᴜᴋᴏ......*_*!*🎀')
         if (!joined) return void M.reply('Eshei maming artist ywrsu ywdrsu yai happaga search twbiyu')
         const term = joined.trim()
         const { videos } = await yts(term)
