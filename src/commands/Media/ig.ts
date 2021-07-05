@@ -6,10 +6,10 @@ import { IParsedArgs, ISimplifiedMessage } from '../typings'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'command_goes_here',
-            description: 'command description',
-            category: 'category',
-            usage: `${client.config.prefix}command`
+            command: 'ig',
+            description: 'ig video/photo download twnabne!',
+            category: 'media',
+            usage: `${client.config.prefix}ig`
         })
     }
 
