@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Synthesized-Infinity/Whatsapp-Botto-Void.git"
+    "url": "git+https://github.com/satyammayy/binaythandle.git"
   },
   "keywords": [
     "bot",
@@ -23,9 +23,9 @@
   "author": "Synthesized Infinity",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Synthesized-Infinity/Whatsapp-Botto-Void/issues"
+    "url": "https://github.com/satyammayy/binaythandle/issues"
   },
-  "homepage": "https://github.com/Synthesized-Infinity/Whatsapp-Botto-Void#readme",
+  "homepage": "https://github.com/satyammayy/binaythandle#readme",
   "devDependencies": {
     "@types/express": "^4.17.12",
     "@types/fs-extra": "^9.0.11",
@@ -44,8 +44,6 @@
     "axios": "^0.21.1",
     "canvas": "^2.8.0",
     "chalk": "^4.1.1",
-    "chess-image-generator": "github:alensaito1/chess-image-generator",
-    "chess-node": "^1.1.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "fs-extra": "^10.0.0",
