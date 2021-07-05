@@ -9,7 +9,7 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'yta',
-            description: 'Downloads given YT Video and sends it as Audio',
+            description: 'YOUTUBE link ama hapirkoh aduga audio oina thark naba!',
             category: 'media',
             aliases: ['ytaudio'],
             usage: `${client.config.prefix}ytv [URL]`,
@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        if (!M.urls.length) return void M.reply('Please provide the URL of the YT video you want too download')
+        if (!M.urls.length) return void M.reply('Youtube URL ama hapirkoh!')
         const audio = new YT(M.urls[0], 'audio')
         if (!audio.validateURL()) return void M.reply(`Please provide a Valid YT URL`)
         const { videoDetails } = await audio.getInfo()
@@ -28,8 +28,8 @@ export default class Command extends BaseCommand {
             MessageType.image,
             Mimetype.jpeg,
             undefined,
-            `🍥 *Title:* ${videoDetails.title}\n🕰️ *Duration:* ${videoDetails.lengthSeconds}\n🗒️ *Description:* ${videoDetails.description}`
+            ` Made By Satyam Mayengbam \n\n🍥 *Title:* ${videoDetails.title}\n🕰️ *Duration:* ${videoDetails.lengthSeconds}\n🗒️ *Description:* ${videoDetails.description}`
         )
-        M.reply(await audio.getBuffer(), MessageType.audio).catch(() => M.reply('An error occurred...'))
+        M.reply(await audio.getBuffer(), MessageType.audio).catch(() => M.reply('Yoza!!! Yadiye Try again!'))
     }
 }
