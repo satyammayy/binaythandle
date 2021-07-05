@@ -26,7 +26,7 @@ export default class Command extends BaseCommand {
         const length = videos.length < 10 ? videos.length : 10
         let text = `🔎 *Results*\n\n`
         for (let i = 0; i < length; i++) {
-            text += `*#${i + 1}*\n📗 *Title:* ${videos[i].title}\n📙 *Description:* ${videos[i].description.slice(
+            text += `*#${i + 1}*Made by Satyam Mayengbam\n\n 📗 *Title:* ${videos[i].title}\n📙 *Description:* ${videos[i].description.slice(
                 50
             )}\n📘 *URL:* ${videos[i].url}\n\n${
                 videos[i] === videos[0]
