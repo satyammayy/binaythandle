@@ -9,7 +9,7 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'sticker',
-            description: 'Converts images/videos into stickers',
+            description: 'Video/image se sticker onaba command ne!',
             category: 'utils',
             usage: `${client.config.prefix}sticker [(as caption | tag)[video | image]]`,
             dm: true,
@@ -23,12 +23,12 @@ export default class Command extends BaseCommand {
             buffer = await this.client.downloadMediaMessage(M.quoted.message)
         if (M.WAMessage.message?.imageMessage || M.WAMessage.message?.videoMessage)
             buffer = await this.client.downloadMediaMessage(M.WAMessage)
-        if (!buffer) return void M.reply(`You didn't provide any Image/Video to convert`)
+        if (!buffer) return void M.reply(`Image/video caption oina ntra repply twbirkoh!`)
         parsedArgs.flags.forEach((flag) => (parsedArgs.joined = parsedArgs.joined.replace(flag, '')))
         const pack = parsedArgs.joined.split('|')
         const sticker = new Sticker(buffer, {
-            pack: pack[1] || '👾 𝐇𝐚𝐧𝐝𝐜𝐫𝐚𝐟𝐭𝐞𝐝 𝐅𝐨𝐫 𝐘𝐨𝐮 ',
-            author: pack[2] || '𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩 𝐁𝐨𝐭𝐭𝐨 𝐕𝐨𝐢𝐝 👾',
+            pack: pack[1] || '💞🐲𝕭𝖎𝖓𝖆💝𝕽𝖆𝖏𝖊𝖓🐉💞 ',
+            author: pack[2] || '💥 🎀 𝕭𝖔𝖙🎀  💥 ',
             crop: parsedArgs.flags.includes('--stretch')
         })
         await sticker.build()
