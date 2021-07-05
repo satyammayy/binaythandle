@@ -20,7 +20,7 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        M.reply('Ngak Ngaibiyuko.......!')
+        M.reply('🎀_*ɴɢᴀᴋ ɴɢᴀɪʙɪʏᴜᴋᴏ......*_*!*🎀')
         if (!M.urls.length) return void M.reply(`Spotify eshei gi URL do hapirkoh!`)
         const url = M.urls[0]
         const track = new Spotify(url)
