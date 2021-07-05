@@ -19,6 +19,7 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
+        M.reply('🎀_*ɴɢᴀᴋ ɴɢᴀɪʙɪʏᴜᴋᴏ......*_*!*🎀')
         if (!M.urls.length) return void M.reply('URL hapirkoh youtube ki video download twnaba!')
         const video = new YT(M.urls[0], 'video')
         if (!video.validateURL()) return void M.reply(`Youtube ki url ntrdi yaday!`)
@@ -28,7 +29,7 @@ export default class Command extends BaseCommand {
             MessageType.image,
             Mimetype.jpeg,
             undefined,
-            `Made By Satyam Mayengbam \n\n🍥 *Title:* ${videoDetails.title}\n🕰️ *Duration:* ${videoDetails.lengthSeconds}\n🗒️ *Description:* ${videoDetails.description}`
+            `Made By *Satyam Mayengbam* \n\n🍥 *Title:* ${videoDetails.title}\n🕰️ *Duration:* ${videoDetails.lengthSeconds}\n🗒️ *Description:* ${videoDetails.description}`
         )
         if (Number(videoDetails.lengthSeconds) > 1500)
             return void M.reply('Cannot Download videos longer than 25 Minutes')
