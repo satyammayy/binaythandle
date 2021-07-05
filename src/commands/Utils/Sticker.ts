@@ -18,6 +18,7 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
+        M.reply('🎀_*ɴɢᴀᴋ ɴɢᴀɪʙɪʏᴜᴋᴏ......*_*!*🎀')
         let buffer
         if (M.quoted?.message?.message?.imageMessage || M.quoted?.message?.message?.videoMessage)
             buffer = await this.client.downloadMediaMessage(M.quoted.message)
