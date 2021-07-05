@@ -20,12 +20,13 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
+        M.reply('Ngak Ngaibiyuko.......!')
         if (!M.urls.length) return void M.reply(`Spotify eshei gi URL do hapirkoh!`)
         const url = M.urls[0]
         const track = new Spotify(url)
         const info = await track.getInfo()
         if (info.error) return void M.reply(`Error Fetching: ${url}. Check if the url is valid and try again`)
-        const caption = `🎧 *Title:* ${info.name || ''}\n🎤 *Artists:* ${(info.artists || []).join(',')}\n💽 *Album:* ${
+        const caption = `Made By*Satyam Mayengbam* \n\n 🎧 *Title:* ${info.name || ''}\n🎤 *Artists:* ${(info.artists || []).join(',')}\n💽 *Album:* ${
             info.album_name
         }\n📆 *Release Date:* ${info.release_date || ''}`
         M.reply(
