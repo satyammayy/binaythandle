@@ -10,7 +10,7 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'spotify',
-            description: 'Downloads given spotify track and sends it as Audio',
+            description: 'Spotify Audio Download Twnabne!',
             category: 'media',
             usage: `${client.config.prefix}spotify [URL]`,
             dm: true,
@@ -20,7 +20,7 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        if (!M.urls.length) return void M.reply(`Please provide the Spotify Track URL that you want to download`)
+        if (!M.urls.length) return void M.reply(`Spotify eshei gi URL do hapirkoh!`)
         const url = M.urls[0]
         const track = new Spotify(url)
         const info = await track.getInfo()
