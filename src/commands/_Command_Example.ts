@@ -1,5 +1,6 @@
 import MessageHandler from '../Handlers/MessageHandler'
 import BaseCommand from '../lib/BaseCommand'
+import { getGifReply } from '../lib/getGify'
 import WAClient from '../lib/WAClient'
 import { IParsedArgs, ISimplifiedMessage } from '../typings'
 
@@ -14,5 +15,18 @@ export default class Command extends BaseCommand {
     }
 
     //eslint-disable-next-line
-    run = async (M: ISimplifiedMessage, args: IParsedArgs): Promise<void> => {}
+    run = async (M: ISimplifiedMessage, args: IParsedArgs): Promise<void> => {
+     case 'slap':
+                case 'pat':
+                case 'punch':
+                    return void this.client.reply(
+                        from,
+                        await getGifReply(command, [
+                            username,
+                            this.client.contacts[tag].notify ||
+                                this.client.contacts[tag].vname ||
+                                this.client.contacts[tag].name ||
+                                'User'
+                        ])
+                    )}
 }
