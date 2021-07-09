@@ -10,7 +10,7 @@ export default class Command extends BaseCommand {
         super(client, handler, {
             command: 'A',
             description: 'dwnload chp1!',
-            category: 'media',
+            category: 'general',
             aliases: ['Chapter1'],
             usage: `${client.config.prefix}A`,
             dm: true,
