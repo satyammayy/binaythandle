@@ -29,7 +29,6 @@ export default class MessageHandler {
                 sender.username
             )} in ${chalk.cyanBright(groupMetadata?.subject || 'DM')}`
         )
-        if ('chap1') return void M.reply('hello')
         if (!command) return void M.reply('Sumai twba command leitay Try again!! \n\n Please Type &help for help list.')
         const user = await this.client.getUser(M.sender.jid)
         if (user.ban) return void M.reply("Uff ng command sijan naba yadre!!.")
