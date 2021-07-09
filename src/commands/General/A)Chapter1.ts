@@ -19,8 +19,8 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        M.reply('🎀_*ɴɢᴀᴋ ɴɢᴀɪʙɪʏᴜᴋᴏ......*_*!*🎀')
-        M.reply('https://drive.google.com/file/d/1i9vAIm6jIUewzS6_5Bmj-p3TZ-77jheE/view?usp=sharing')
+        return void M.reply(M.reply('🎀_*ɴɢᴀᴋ ɴɢᴀɪʙɪʏᴜᴋᴏ......*_*!*🎀')
+                    M.reply('https://drive.google.com/file/d/1i9vAIm6jIUewzS6_5Bmj-p3TZ-77jheE/view?usp=sharing'))
         
     }
         
