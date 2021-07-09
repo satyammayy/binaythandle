@@ -8,7 +8,7 @@ import { ISimplifiedMessage } from '../../typings'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'A',
+            command: 'a',
             description: 'dwnload chp1!',
             category: 'media',
             aliases: ['Chapter1'],
