@@ -9,7 +9,7 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'A',
-            description: 'dwnchp1!',
+            description: 'dwnload chp1!',
             category: 'media',
             aliases: ['Chapter1'],
             usage: `${client.config.prefix}A`,
