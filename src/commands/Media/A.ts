@@ -22,10 +22,10 @@ export default class Command extends BaseCommand {
         const document = this.client.assets.get('Environmental Issues Sirloya_copy')
       M.reply(
           document,
-          Messagetype.document,
+          MessageType.document,
           Mimetype.pdf
-          Undefined,
-          Undefined
+          undefined,
+          undefined
       )
       }
         
