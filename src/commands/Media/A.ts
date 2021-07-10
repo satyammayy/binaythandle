@@ -19,7 +19,11 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-      M.reply('🎀_*ɴɢᴀᴋ ɴɢᴀɪʙɪʏᴜᴋᴏ......*_*!')
+        const document = this.client.assets.get('Environmental Issues Sirloya_copy')
+      M.reply(
+          pdfbuffer,
+          Messagetype.document,
+          Mimetype.pdf)
       }
         
 }
