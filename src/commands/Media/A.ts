@@ -20,7 +20,7 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
         const document = this.client.assets.get('Environmental Issues Sirloya_copy')
-          return void  M.reply(document, mimetype: Mimetype.pdf,)
+          return void  M.reply(document)
       
       }
         
