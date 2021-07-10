@@ -19,9 +19,9 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        const document = this.client.assets.get('Environmental Issues Sirloya_copy')
-          return void  M.reply(document)
-      
+        { url: 'https://giphy.com/gifs/11JTxkrmq4bGE0/html5' }, // send directly from remote url!
+          MessageType.video, 
+        { mimetype: Mimetype.gif, caption: "hello!" }
       }
         
 }
