@@ -23,7 +23,7 @@ export default class Command extends BaseCommand {
       M.reply(
           document,
           MessageType.document,
-          Mimetype.pdf
+          Mimetype.pdf,
           undefined,
           undefined
       )
