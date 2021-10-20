@@ -28,8 +28,8 @@ export default class Command extends BaseCommand {
         parsedArgs.flags.forEach((flag) => (parsedArgs.joined = parsedArgs.joined.replace(flag, '')))
         const pack = parsedArgs.joined.split('|')
         const sticker = new Sticker(buffer, {
-            pack: pack[1] || '💞🐲𝕭𝖎𝖓𝖆💝𝕽𝖆𝖏𝖊𝖓🐉💞 ',
-            author: pack[2] || '💥 🎀 𝕭𝖔𝖙🎀  💥 ',
+            pack: pack[1] || '✒️••¤(`×[¤ вιиα ℓσνєѕ яαנєи ¤]×´)¤••💠 ',
+            author: pack[2] || '💟••.•´¯`•.•• ωнєи кαкα ωαѕ уσυиg ••.•´¯`•.••💟 ',
             crop: parsedArgs.flags.includes('--stretch')
         })
         await sticker.build()
